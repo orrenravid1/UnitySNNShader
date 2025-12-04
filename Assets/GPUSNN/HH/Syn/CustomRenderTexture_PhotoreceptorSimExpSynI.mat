@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CustomRenderTexture_PhotoreceptorSimExpSynI
+  m_Shader: {fileID: 4800000, guid: fe0d714ddcda80648814c89b9213a9d8, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _E_rev_Tex:
+        m_Texture: {fileID: 2800000, guid: 7ccd655a5225b8049ac7845dba0bad93, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _V_Tex:
+        m_Texture: {fileID: 8400000, guid: 3ff1126169ae56f41ae9c61c1dae56ec, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Weight_Tex:
+        m_Texture: {fileID: 2800000, guid: 7ccd655a5225b8049ac7845dba0bad93, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _g_Tex:
+        m_Texture: {fileID: 8400000, guid: 9a85ca2faaa1d934b94ea60aa99741d2, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _DeltaTime: 0.036135
+    - _E_rev_Max: 1.09
+    - _E_rev_Min: -80
+    - _I_Max: 60
+    - _I_Min: -80
+    - _NeuronTime: 477.49188
+    - _Tmp_i: 0
+    - _Tmp_j: 0
+    - _V_Max: 45
+    - _V_Min: -80
+    - _Weight_Max: 5.2
+    - _g_Max: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _E_rev_Dims: {r: 0.25, g: 0.25, b: 4, a: 4}
+    - _g_Dims: {r: 0.00052083336, g: 0.0009259259, b: 1920, a: 1080}
+  m_BuildTextureStacks: []
