@@ -19,6 +19,7 @@ A Unity project demonstrating GPU-accelerated spiking neural network shaders.
 For all scenes:
 - $I$ is computed as a scaled input from the input image
 - A slider is available to manipulate simulation speed
+- **WARNING**: Certain simulation configurations can lead to very fast flashing images.
 
 ## 1. LIF Scene
 
