@@ -4,14 +4,6 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using NaughtyAttributes;
 
-public enum HHModelComponentChoice
-{
-    n,
-    m,
-    h,
-    V
-}
-
 public class PhotoReceptorHHShaderSim : MonoBehaviour
 {
     [SerializeField]
@@ -42,22 +34,92 @@ public class PhotoReceptorHHShaderSim : MonoBehaviour
     [SerializeField]
     private RenderTexture VIntermediate;
 
-    [SerializeField]
-    private RenderTexture CameraRenderTex;
-    [SerializeField]
-    private Material DisplayMaterial;
-
-    [SerializeField, OnValueChanged(nameof(UpdateDisplayMaterial))]
-    private HHModelComponentChoice ComponentToShow = HHModelComponentChoice.V;
-
-    [SerializeField, OnValueChanged(nameof(SwitchN))]
-    bool SwitchNToCamera;
-    [SerializeField, OnValueChanged(nameof(SwitchM))]
-    bool SwitchMToCamera;
-    [SerializeField, OnValueChanged(nameof(SwitchH))]
-    bool SwitchHToCamera;
-
     private CommandBuffer cmdBuffer;
+
+    public const float gNaDefault = 120.0f;
+    public const float gKDefault = 36.0f;
+    public const float gLDefault = 0.3f;
+    public const float ENaDefault = 50.0f;
+    public const float EKDefault = -77.0f;
+    public const float ELDefault = -54.387f;
+    public const float CDefault = 1.0f;
+
+    public void SetGNaColor(Color color)
+    {
+        HHModelMaterial.SetColor("_g_Na", color);
+    }
+
+    public void SetGKColor(Color color)
+    {
+        HHModelMaterial.SetColor("_g_K", color);
+    }
+
+    public void SetGLColor(Color color)
+    {
+        HHModelMaterial.SetColor("_g_L", color);
+    }
+
+    public void SetENaColor(Color color)
+    {
+        HHModelMaterial.SetColor("_E_Na", color);
+    }
+
+    public void SetEKColor(Color color)
+    {
+        HHModelMaterial.SetColor("_E_K", color);
+    }
+
+    public void SetELColor(Color color)
+    {
+        HHModelMaterial.SetColor("_E_L", color);
+    }
+
+    public void SetCColor(Color color)
+    {
+        HHModelMaterial.SetColor("_C", color);
+    }
+
+    public void SetGNaMul(float mul)
+    {
+        HHModelMaterial.SetFloat("_g_Na_Mul", mul);
+    }
+
+    public void SetGKMul(float mul)
+    {
+        HHModelMaterial.SetFloat("_g_K_Mul", mul);
+    }
+
+    public void SetGLMul(float mul)
+    {
+        HHModelMaterial.SetFloat("_g_L_Mul", mul);
+    }
+
+    public void SetENaMul(float mul)
+    {
+        HHModelMaterial.SetFloat("_E_Na_Mul", mul);
+    }
+
+    public void SetEKMul(float mul)
+    {
+        HHModelMaterial.SetFloat("_E_K_Mul", mul);
+    }
+
+    public void SetELMul(float mul)
+    {
+        HHModelMaterial.SetFloat("_E_L_Mul", mul);
+    }
+
+    public void SetCMul(float mul)
+    {
+        HHModelMaterial.SetFloat("_C_Mul", mul);
+    }
+
+    [Button]
+    public void ReInitialize()
+    {
+        networkClock.ResetTime();
+        InitializeTextures();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -65,6 +127,8 @@ public class PhotoReceptorHHShaderSim : MonoBehaviour
         InitializeTextures();
         cmdBuffer = new CommandBuffer();
         cmdBuffer.name = "HH Blit Commands";
+
+        ResetDefaultMuls();
     }
 
     // Update is called once per frame
@@ -117,65 +181,14 @@ public class PhotoReceptorHHShaderSim : MonoBehaviour
         UpdateMaterialTime(HHModelNMaterial);
     }
 
-    private void UpdateDisplayMaterial()
+    void ResetDefaultMuls()
     {
-        switch (ComponentToShow)
-        {
-            case HHModelComponentChoice.V:
-                DisplayMaterial.SetTexture("_MainTex", VIntermediate);
-                break;
-            case HHModelComponentChoice.n:
-                DisplayMaterial.SetTexture("_MainTex", nIntermediate);
-                break;
-            case HHModelComponentChoice.m:
-                DisplayMaterial.SetTexture("_MainTex", mIntermediate);
-                break;
-            case HHModelComponentChoice.h:
-                DisplayMaterial.SetTexture("_MainTex", hIntermediate);
-                break;
-        }
-    }
-
-    private void SwitchN()
-    {
-        if (SwitchNToCamera)
-        {
-            HHModelNMaterial.SetTexture("_V_Tex", CameraRenderTex);
-        }
-        else
-        {
-            HHModelNMaterial.SetTexture("_V_Tex", VIntermediate);
-        }
-    }
-
-    private void SwitchM()
-    {
-        if (SwitchMToCamera)
-        {
-            HHModelMMaterial.SetTexture("_V_Tex", CameraRenderTex);
-        }
-        else
-        {
-            HHModelMMaterial.SetTexture("_V_Tex", VIntermediate);
-        }
-    }
-
-    private void SwitchH()
-    {
-        if (SwitchHToCamera)
-        {
-            HHModelHMaterial.SetTexture("_V_Tex", CameraRenderTex);
-        }
-        else
-        {
-            HHModelHMaterial.SetTexture("_V_Tex", VIntermediate);
-        }
-    }
-
-    [Button]
-    private void ReInitialize()
-    {
-        networkClock.ResetTime();
-        InitializeTextures();
+        SetGNaMul(gNaDefault);
+        SetGKMul(gKDefault);
+        SetGLMul(gLDefault);
+        SetENaMul(ENaDefault);
+        SetEKMul(EKDefault);
+        SetELMul(ELDefault);
+        SetCMul(CDefault);
     }
 }

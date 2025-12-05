@@ -2,25 +2,29 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: CustomRenderTexture_PhotoreceptorSimHH
   m_Shader: {fileID: 4800000, guid: c28bfaba5791fcd4d9d1c716f18aaf68, type: 3}
-  m_ShaderKeywords: 
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _InputTex:
-        m_Texture: {fileID: 8400000, guid: c648fd61f2ea77d45a1ad6f660dc8360, type: 2}
+        m_Texture: {fileID: 8400000, guid: 235f466824c843742acd63258bff8c02, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _h_Tex:
@@ -35,22 +39,23 @@ Material:
         m_Texture: {fileID: 8400000, guid: d75105831cc739e458e347f4a6d0adc6, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _C_Mul: 1
-    - _DeltaTime: 0.036135
+    - _DeltaTime: 0.05697796
     - _E_K_Mul: -77
     - _E_L_Mul: -54.387
     - _E_Na_Mul: 50
     - _InputCurrent_Max: 1000
     - _InputCurrent_Min: 0
-    - _NeuronTime: 477.49188
+    - _NeuronTime: 1359.6056
     - _NoiseFrequency: 15.14
-    - _NoiseMultiplier_Max: 199
+    - _NoiseMultiplier_Max: 0
     - _NoiseMultiplier_Min: 0
     - _NoiseMultiplier_Mul: 50
     - _Sensitivity_Mul: 60
-    - _V_Max: 80
-    - _V_Min: -45
+    - _V_Max: 45
+    - _V_Min: -80
     - _g_K_Mul: 36
     - _g_L_Mul: 0.3
     - _g_Na_Mul: 120
@@ -71,3 +76,4 @@ Material:
     - _m: {r: 1, g: 1, b: 1, a: 1}
     - _n: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

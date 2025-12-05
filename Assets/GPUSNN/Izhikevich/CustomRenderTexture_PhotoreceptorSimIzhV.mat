@@ -33,9 +33,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _C_Mul: -65
-    - _DeltaTime: 0.045639426
-    - _NeuronTime: 838.4715
+    - _C_Mul: -59.57503
+    - _DeltaTime: 0.024761194
+    - _NeuronTime: 655.87006
     - _NoiseFrequency: 1
     - _NoiseMultiplier_Mul: 20
     - _Sensitivity_Mul: 100

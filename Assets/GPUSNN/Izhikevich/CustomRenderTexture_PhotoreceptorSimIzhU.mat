@@ -33,10 +33,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _A_Mul: 0.18788338
-    - _B_Mul: 0.24377632
-    - _D_Mul: -5.638646
-    - _DeltaTime: 0.045639426
+    - _A_Mul: 1
+    - _B_Mul: 1.6411059
+    - _D_Mul: -3.4707217
+    - _DeltaTime: 0.024761194
     - _NeuronTime: 0
     - _NoiseFrequency: 1
     - _NoiseMultiplier_Mul: 1
@@ -46,9 +46,9 @@ Material:
     - _V_Max: 40
     - _V_Min: -80
     m_Colors:
-    - _A: {r: 1, g: 1, b: 1, a: 1}
-    - _B: {r: 1, g: 1, b: 1, a: 1}
-    - _D: {r: 1, g: 1, b: 1, a: 1}
+    - _A: {r: 0.22182551, g: 0.8830836, b: 0.20099092, a: 1}
+    - _B: {r: 0.7781938, g: 0.74616677, b: 0.23316991, a: 1}
+    - _D: {r: 0.1655706, g: 0.26310065, b: 0.7274592, a: 1}
     - _NoiseMultiplier: {r: 0, g: 0, b: 0, a: 0}
     - _Sensitivity: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
