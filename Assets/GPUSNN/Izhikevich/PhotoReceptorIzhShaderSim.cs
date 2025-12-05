@@ -24,6 +24,46 @@ public class PhotoReceptorIzhShaderSim : MonoBehaviour
 
     private CommandBuffer cmdBuffer;
 
+    public void SetAColor(Color color)
+    {
+        IzhModelUMaterial.SetColor("_A", color);
+    }
+
+    public void SetBColor(Color color)
+    {
+        IzhModelUMaterial.SetColor("_B", color);
+    }
+
+    public void SetCColor(Color color)
+    {
+        IzhModelVMaterial.SetColor("_C", color);
+    }
+
+    public void SetDColor(Color color)
+    {
+        IzhModelUMaterial.SetColor("_D", color);
+    }
+
+    public void SetAMul(float mul)
+    {
+        IzhModelUMaterial.SetFloat("_A_Mul", mul);
+    }
+
+    public void SetBMul(float mul)
+    {
+        IzhModelUMaterial.SetFloat("_B_Mul", mul);
+    }
+
+    public void SetCMul(float mul)
+    {
+        IzhModelVMaterial.SetFloat("_C_Mul", mul);
+    }
+
+    public void SetDMul(float mul)
+    {
+        IzhModelUMaterial.SetFloat("_D_Mul", mul);
+    }
+
     // Start is called before the first frame update
     void Start()
     {

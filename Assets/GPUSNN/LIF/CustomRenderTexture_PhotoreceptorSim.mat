@@ -69,7 +69,7 @@ Material:
     - _C: 1
     - _C_Mul: 1
     - _Cutoff: 0.5
-    - _DeltaTime: 0.0058127977
+    - _DeltaTime: 0.018535998
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
@@ -79,7 +79,7 @@ Material:
     - _Mode: 0
     - _Multiplier: 1.71
     - _Multiplier_Mul: 100
-    - _NeuronTime: 1057.0006
+    - _NeuronTime: 69.80897
     - _NoiseFrequency: 1
     - _NoiseMultiplier: 0.16
     - _NoiseMultiplier_Mul: 0
@@ -100,14 +100,14 @@ Material:
     - _V_thresh_Mul: 1
     - _ZWrite: 1
     m_Colors:
-    - _C: {r: 0.4318654, g: 0.6492824, b: 0.6307937, a: 1}
+    - _C: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 0.9926183, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Multiplier: {r: 1, g: 1, b: 1, a: 1}
     - _NoiseMultiplier: {r: 1, g: 1, b: 1, a: 0}
-    - _R: {r: 0.90731376, g: 0.08550293, b: 0.45611, a: 1}
+    - _R: {r: 1, g: 1, b: 1, a: 1}
     - _Sensitivity: {r: 1, g: 1, b: 1, a: 1}
-    - _V_0: {r: 0.27759877, g: 0.28829613, b: 0.100232884, a: 1}
+    - _V_0: {r: 0, g: 0, b: 0, a: 1}
     - _V_thresh: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
