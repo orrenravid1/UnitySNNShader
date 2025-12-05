@@ -1,6 +1,7 @@
 # UnitySNNShader
 A Unity project demonstrating GPU-accelerated spiking neural network shaders.
-**The Setup**:
+
+## The Setup:
 1. All SNNs are standard HLSL shader implementations of their respective models.
     - Each shader computes the model across 3 color channels `R,G,B` simulating each color channel as an independent instance of the model
 2. Each model's simulation has the following:
