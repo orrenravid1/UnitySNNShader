@@ -137,9 +137,9 @@ $$
 ### Controls:
 
 Sliders and Color Pickers to manipulate 
-- $gNa$, $ENa$,
-- $gK$, $EK$
-- $gL$, $EL$
+- $g_{Na}$, $E_{Na}$
+- $g_K$, $E_K$
+- $g_L$, $E_L$
 - $C$
 
 
