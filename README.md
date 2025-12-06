@@ -14,6 +14,7 @@ A Unity project demonstrating GPU-accelerated spiking neural network shaders.
 4. All simulations are integrated using Explicit Euler with a timestep proportional to the simulation speed
     - Note that this can lead to instability in the Hodgkin Huxley model especially, but in all others at low framerates as well
 5. All shaders require the use of clamping for stability. This means that infinities are not possible, but that the model may misbehave at unreasonable values (very fun to play with).
+6. Some simulations are easier to look at when some noise is applied to the input signal. For the Izhikevich model, uniform noise was added to make the images easier to look at.
 
 # Example Scenes
 For all scenes:
