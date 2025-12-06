@@ -35,7 +35,7 @@ Material:
     - _BetaExpDenomOffset: 0
     - _BetaExpVoltageOffset: 0
     - _BetaMul: 1
-    - _DeltaTime: 0.05697796
+    - _DeltaTime: 0.04196796
     - _V_Max: 45
     - _V_Min: -80
     m_Colors:

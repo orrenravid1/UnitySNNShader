@@ -42,13 +42,13 @@ Material:
     m_Ints: []
     m_Floats:
     - _C_Mul: 1
-    - _DeltaTime: 0.05697796
+    - _DeltaTime: 0.04196796
     - _E_K_Mul: -77
     - _E_L_Mul: -54.387
     - _E_Na_Mul: 50
     - _InputCurrent_Max: 1000
     - _InputCurrent_Min: 0
-    - _NeuronTime: 1359.6056
+    - _NeuronTime: 143.37872
     - _NoiseFrequency: 15.14
     - _NoiseMultiplier_Max: 0
     - _NoiseMultiplier_Min: 0

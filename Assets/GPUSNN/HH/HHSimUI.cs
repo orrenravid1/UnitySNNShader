@@ -156,13 +156,16 @@ public class HHSimUI : MonoBehaviour
         eLMulSlider.value = PhotoReceptorHHShaderSim.ELDefault;
         cMulSlider.value = PhotoReceptorHHShaderSim.CDefault;
 
-        colorPickerGNa.CurrentColor = Color.white;
-        colorPickerENa.CurrentColor = Color.white;
-        colorPickerGK.CurrentColor = Color.white;
-        colorPickerEK.CurrentColor = Color.white;
-        colorPickerGL.CurrentColor = Color.white;
-        colorPickerEL.CurrentColor = Color.white;
-        colorPickerC.CurrentColor = Color.white;
+        colorPickerGNa.AssignColor(Color.white);
+        colorPickerENa.AssignColor(Color.white);
+        colorPickerGK.AssignColor(Color.white);
+        colorPickerEK.AssignColor(Color.white);
+        colorPickerGL.AssignColor(Color.white);
+        colorPickerEL.AssignColor(Color.white);
+        colorPickerC.AssignColor(Color.white);
+
+        photoReceptorHHShaderSim.ResetDefaultMuls();
+        photoReceptorHHShaderSim.ResetDefaultColors();
 
         photoReceptorHHShaderSim.ReInitialize();
     }

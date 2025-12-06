@@ -121,6 +121,28 @@ public class PhotoReceptorHHShaderSim : MonoBehaviour
         InitializeTextures();
     }
 
+    public void ResetDefaultMuls()
+    {
+        SetGNaMul(gNaDefault);
+        SetGKMul(gKDefault);
+        SetGLMul(gLDefault);
+        SetENaMul(ENaDefault);
+        SetEKMul(EKDefault);
+        SetELMul(ELDefault);
+        SetCMul(CDefault);
+    }
+
+    public void ResetDefaultColors()
+    {
+        SetGNaColor(Color.white);
+        SetGKColor(Color.white);
+        SetGLColor(Color.white);
+        SetENaColor(Color.white);
+        SetEKColor(Color.white);
+        SetELColor(Color.white);
+        SetCColor(Color.white);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -179,16 +201,5 @@ public class PhotoReceptorHHShaderSim : MonoBehaviour
         UpdateMaterialTime(HHModelHMaterial);
         UpdateMaterialTime(HHModelMMaterial);
         UpdateMaterialTime(HHModelNMaterial);
-    }
-
-    void ResetDefaultMuls()
-    {
-        SetGNaMul(gNaDefault);
-        SetGKMul(gKDefault);
-        SetGLMul(gLDefault);
-        SetENaMul(ENaDefault);
-        SetEKMul(EKDefault);
-        SetELMul(ELDefault);
-        SetCMul(CDefault);
     }
 }
