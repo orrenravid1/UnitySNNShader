@@ -98,15 +98,15 @@ $$
 Gating variable dynamics:
 
 $$
-\frac{dm}{dt} = \alpha_m(V) \bigl(1 - m\bigr) - \beta_m(V)\,m
+\frac{dm}{dt} = \alpha_m(V) \bigl(1 - m\bigr) - \beta_m(V)m
 $$
 
 $$
-\frac{dn}{dt} = \alpha_n(V) \bigl(1 - n\bigr) - \beta_n(V)\,n
+\frac{dn}{dt} = \alpha_n(V) \bigl(1 - n\bigr) - \beta_n(V)n
 $$
 
 $$
-\frac{dh}{dt} = \alpha_h(V) \bigl(1 - h\bigr) - \beta_h(V)\,h
+\frac{dh}{dt} = \alpha_h(V) \bigl(1 - h\bigr) - \beta_h(V)h
 $$
 
 Rate functions:
