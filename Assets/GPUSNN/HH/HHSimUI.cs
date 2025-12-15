@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Xenia.ColorPicker;
+using TMPro;
 
 public class HHSimUI : MonoBehaviour
 {
@@ -25,21 +26,21 @@ public class HHSimUI : MonoBehaviour
     private ColorPicker colorPickerC;
 
     [SerializeField]
-    private Slider simSpeedSlider;
+    private CustomSlider simSpeedSlider;
     [SerializeField]
-    private Slider gNaMulSlider;
+    private CustomSlider gNaMulSlider;
     [SerializeField]
-    private Slider gKMulSlider;
+    private CustomSlider gKMulSlider;
     [SerializeField]
-    private Slider gLMulSlider;
+    private CustomSlider gLMulSlider;
     [SerializeField]
-    private Slider eNaMulSlider;
+    private CustomSlider eNaMulSlider;
     [SerializeField]
-    private Slider eKMulSlider;
+    private CustomSlider eKMulSlider;
     [SerializeField]
-    private Slider eLMulSlider;
+    private CustomSlider eLMulSlider;
     [SerializeField]
-    private Slider cMulSlider;
+    private CustomSlider cMulSlider;
 
     [SerializeField]
     private Button resetParametersButton;
@@ -77,27 +78,26 @@ public class HHSimUI : MonoBehaviour
             photoReceptorHHShaderSim.SetCColor(color);
         });
 
-        simSpeedSlider.onValueChanged.AddListener(SetTimeStep);
+        simSpeedSlider.onValueChanged += SetTimeStep;
 
-        gNaMulSlider.onValueChanged.AddListener(SetGNaMul);
-        eNaMulSlider.onValueChanged.AddListener(SetENaMul);
-        gKMulSlider.onValueChanged.AddListener(SetGKMul);
-        eKMulSlider.onValueChanged.AddListener(SetEKMul);
-        gLMulSlider.onValueChanged.AddListener(SetGLMul);
-        eLMulSlider.onValueChanged.AddListener(SetELMul);
-        cMulSlider.onValueChanged.AddListener(SetCMul);
+        gNaMulSlider.onValueChanged += SetGNaMul;
+        eNaMulSlider.onValueChanged += SetENaMul;
+        gKMulSlider.onValueChanged += SetGKMul;
+        eKMulSlider.onValueChanged += SetEKMul;
+        gLMulSlider.onValueChanged += SetGLMul;
+        eLMulSlider.onValueChanged += SetELMul;
+        cMulSlider.onValueChanged += SetCMul;
 
         resetParametersButton.onClick.AddListener(ResetParameters);
 
-
-        SetTimeStep(simSpeedSlider.value);
-        SetGNaMul(gNaMulSlider.value);
-        SetENaMul(eNaMulSlider.value);
-        SetGKMul(gKMulSlider.value);
-        SetEKMul(eKMulSlider.value);
-        SetGLMul(gLMulSlider.value);
-        SetELMul(eLMulSlider.value);
-        SetCMul(cMulSlider.value);
+        SetTimeStep(simSpeedSlider.Value);
+        SetGNaMul(gNaMulSlider.Value);
+        SetENaMul(eNaMulSlider.Value);
+        SetGKMul(gKMulSlider.Value);
+        SetEKMul(eKMulSlider.Value);
+        SetGLMul(gLMulSlider.Value);
+        SetELMul(eLMulSlider.Value);
+        SetCMul(cMulSlider.Value);
     }
 
     // Update is called once per frame
@@ -148,13 +148,13 @@ public class HHSimUI : MonoBehaviour
 
     private void ResetParameters()
     {
-        gNaMulSlider.value = PhotoReceptorHHShaderSim.gNaDefault;
-        eNaMulSlider.value = PhotoReceptorHHShaderSim.ENaDefault;
-        gKMulSlider.value = PhotoReceptorHHShaderSim.gKDefault;
-        eKMulSlider.value = PhotoReceptorHHShaderSim.EKDefault;
-        gLMulSlider.value = PhotoReceptorHHShaderSim.gLDefault;
-        eLMulSlider.value = PhotoReceptorHHShaderSim.ELDefault;
-        cMulSlider.value = PhotoReceptorHHShaderSim.CDefault;
+        gNaMulSlider.Value = PhotoReceptorHHShaderSim.gNaDefault;
+        eNaMulSlider.Value = PhotoReceptorHHShaderSim.ENaDefault;
+        gKMulSlider.Value = PhotoReceptorHHShaderSim.gKDefault;
+        eKMulSlider.Value = PhotoReceptorHHShaderSim.EKDefault;
+        gLMulSlider.Value = PhotoReceptorHHShaderSim.gLDefault;
+        eLMulSlider.Value = PhotoReceptorHHShaderSim.ELDefault;
+        cMulSlider.Value = PhotoReceptorHHShaderSim.CDefault;
 
         colorPickerGNa.AssignColor(Color.white);
         colorPickerENa.AssignColor(Color.white);
